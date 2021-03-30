@@ -6,4 +6,5 @@ def home(request):
 
 def about(request):
     return render(request, 'about.html')
-
+def maps_index(request):
+    return render(request, 'maps/index.html', {'maps': maps})

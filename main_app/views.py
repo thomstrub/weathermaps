@@ -5,5 +5,5 @@ def home(request):
     return HttpResponse('<h1>Hello WeatherMaps<h1>')
 
 def about(request):
-    return HttpResponse('<h1>About WeatherMaps<h1>')
+    return render(request, 'about.html')
 

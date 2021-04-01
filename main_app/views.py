@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 class Map:
-    def __init__(self, name, region, subregion):
+    def __init__(self, name, region, subregion, elevation):
         self.name = name
         self.region = region
         self.subregion = subregion

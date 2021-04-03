@@ -18,7 +18,8 @@
         </ul>
         <ul class="right">
           <li><a href="/about">About</a></li>
-          <li><a href="/maps">My WeatherMaps</a></li>
+          <li><a href="{% url 'maps_create' %}">Add a Map</a></li>
+          <li><a href="{% url 'index' %}">My WeatherMaps</a></li>
         </ul>
       </div>
     </nav>

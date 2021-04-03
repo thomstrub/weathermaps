@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.views.generic.edit import CreateView
 from .models import Map
 
 # class Map:
@@ -14,7 +15,9 @@ from .models import Map
 #     Map('Mt. St. Helens South Ascent', 'Mt. St. Helens', 'South Cascades', 15000),
 #     Map('Shipwreck Coast', 'Olympic Coast', 'Olympic Penninsula', 0)
 # ]
-
+class MapCreate(CreateView):
+    model = Map
+    fields ='__all__'
 
 def home(request):
     return HttpResponse('<h1>Hello WeatherMaps<h1>')

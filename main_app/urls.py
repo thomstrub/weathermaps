@@ -7,4 +7,5 @@ urlpatterns = [
     path('about/', views.about, name='about'),
     path('maps/', views.maps_index, name='index'),
     path('maps/<int:map_id>/', views.maps_detail, name='detail'),
+    path('maps/create', views.MapCreate.as_view(), name='maps_create'),
 ]

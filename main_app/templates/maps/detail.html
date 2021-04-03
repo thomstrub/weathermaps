@@ -1,24 +1,18 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1>Maps List</h1>
+<h1>Map Details</h1>
 
-{% for map in maps %}
 <div class='card'>
-    <a href="/maps/{{ map.id }}">
-    <div class='card-content'>
-        <span class='card-title'>{{map.name}}</span>
+    <div class="card-content">
+        <span class="card-title">{{ map.name }}</span>
         <p>Region: {{ map.region }}</p>
         <p>Sub-Region: {{ map.subregion }}</p>
         {% if map.elevation > 0 %}
-            <p>Elevation: {{ map.elevation }}</p>
+            <p>Elevation: {{map.elevation}}</p>
         {% else %}
             <p>Elevation: Sea Level</p>
         {% endif %}
     </div>
-    </a>
 </div>
-{% endfor %}
-
-
 {% endblock %}

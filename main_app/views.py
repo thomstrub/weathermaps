@@ -21,6 +21,11 @@ def home(request):
 
 def about(request):
     return render(request, 'about.html')
+
 def maps_index(request):
     maps = Map.objects.all()
     return render(request, 'maps/index.html', {'maps': maps})
+    
+def maps_detail(request, map_id):
+    map = Map.objects.get(id=map_id)
+    return render(request, 'maps/detail.html', {'map': map})

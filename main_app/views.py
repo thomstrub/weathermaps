@@ -18,6 +18,7 @@ from .models import Map
 class MapCreate(CreateView):
     model = Map
     fields ='__all__'
+    success_url = '/maps/'
 
 def home(request):
     return HttpResponse('<h1>Hello WeatherMaps<h1>')
